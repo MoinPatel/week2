@@ -1,0 +1,80 @@
+@blue: #2c3e50;
+@basefont: 20px;
+.square(@size){
+	width: @size;
+	height: @size;
+}
+
+.roundbutton{
+	border-radius: 10px;
+	background: @blue;
+	color:#fff;
+}
+.fontstyle(@fontcolor) {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size:@basefont;
+	color:@fontcolor;
+	font-weight: 300;
+	text-decoration: underline;
+	line-height: 42px; 
+}
+h1{
+	font-size: @basefont * 3; 
+}
+h2{
+	font-size: @basefont * 1.5;
+}
+body{
+	font-size:@basefont;
+	.fontstyle(grey); 
+}
+
+header {
+	nav{
+		background-color:red;
+		ul{
+				color:white;
+				margin: 0;
+				padding: 0;
+			li{
+				display:inline;
+				font-size: @basefont;
+				&:last-child{
+					margin-right:0px;
+				}
+				&:nth-child(2){
+					color:green;
+				}
+			}
+		}
+	}
+}
+a{
+	color: @blue;
+}
+	&:hover{
+		color:black;
+	}
+section{
+	
+	article{
+			width:80%;
+		header{
+			background: @blue;
+			h2{
+				color:white;
+			}
+		}
+		p{
+			button[type="submit"]{
+				.roundbutton;
+				padding: 5px 2px;
+				}		}
+	}
+}
+footer{
+	.mysquare{
+		.square(45px);
+		background-color:red; 
+	}
+}
